@@ -1,0 +1,3 @@
+cat<nash
+A=$'\\\x20flag.txt';cat$A
+cat$IIFSFS/home/challuser/flag.txt
