@@ -1,0 +1,8 @@
+export PATH="/home/rael/.rvm/gems/ruby-2.7.0@global/bin:/usr/share/rvm/rubies/ruby-2.7.0/bin:$PATH"
+export GEM_HOME='/home/rael/.rvm/gems/ruby-2.7.0@global'
+export GEM_PATH='/home/rael/.rvm/gems/ruby-2.7.0@global'
+export MY_RUBY_HOME='/usr/share/rvm/rubies/ruby-2.7.0'
+export IRBRC='/usr/share/rvm/rubies/ruby-2.7.0/.irbrc'
+unset MAGLEV_HOME
+unset RBXOPT
+export RUBY_VERSION='ruby-2.7.0'

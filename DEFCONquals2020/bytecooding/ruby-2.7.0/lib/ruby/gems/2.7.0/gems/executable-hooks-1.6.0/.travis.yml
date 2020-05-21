@@ -1,0 +1,47 @@
+language: ruby
+rvm:
+  - jruby
+  - jruby-head
+  - rbx-3
+before_install:
+  - 'rvm @global do gem uninstall -a -x rubygems-bundler executable-hooks || true'
+  - 'rm -f $(rvm @global do gem env home)/bin/jruby_executable_hooks'
+  - 'rm -rf $rvm_path/gems/*/{bin,gems}/rubygems-bundler-* $rvm_path/gems/*/{bin,gems}/executable-hooks-* $rvm_path/gems/*/bin/ruby_*_{wrapper,hooks}'
+  - hash -r
+  - 'if [[ -n "${WITH_RUBYGEMS:-}" ]] ; then gem update --system "${WITH_RUBYGEMS}" ; fi'
+  - gem build executable-hooks.gemspec
+  - gem install executable-hooks-$(awk -F'"' '/VERSION/{print $2}' < lib/executable-hooks/version.rb).gem --development
+before_script:
+  - unset BUNDLE_GEMFILE
+script: NOEXEC=0 tf --text test-tf${TEST_SUFFIX:-}/*
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#rubygems-bundler"
+  email:
+    recipients:
+      - mpapis@gmail.com
+    on_failure: change
+matrix:
+  fast_finish: true
+  include:
+    - rvm: 1.8.7
+      env: WITH_RUBYGEMS=1.4.2
+    - rvm: 1.8.7
+      env: WITH_RUBYGEMS=1.6.2
+    - rvm: 2.5
+      env: TEST_SUFFIX=-bundle
+    - rvm: 2.5
+      env: TEST_SUFFIX=-truffleruby
+    - rvm: 1.8.7
+    - rvm: 1.9.2
+    - rvm: 1.9.3
+    - rvm: 2.0.0
+    - rvm: 2.1
+    - rvm: 2.2
+    - rvm: 2.3
+    - rvm: 2.4
+    - rvm: 2.5
+    - rvm: ruby-head
+  allow_failures:
+    - rvm: rbx-3

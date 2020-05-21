@@ -1,0 +1,27 @@
+language: ruby
+before_install:
+  - "if [[ $TRAVIS_RUBY_VERSION == 1.8.7 ]] ; then rvm rubygems latest-2.1 ; fi"
+  - "if [[ $TRAVIS_RUBY_VERSION == 1.9.3 ]] ; then gem update bundler ; fi"
+rvm:
+  - jruby
+  - ruby-head
+  - 1.8.7
+  - 1.9.3
+  - 2.0.0
+  - 2.1
+  - 2.2
+  - 2.3
+  - 2.4.1
+  - rbx
+notifications:
+  irc:
+    channels:
+      - "irc.freenode.org#rvm-test"
+  email:
+    recipients:
+      - mpapis@gmail.com
+    on_failure: change
+matrix:
+  allow_failures:
+    - rvm: rbx
+  fast_finish: true

@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+if
+  [[ -s "/usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/environment" ]]
+then
+  source "/usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/environment"
+  exec rake "$@"
+else
+  echo "ERROR: Missing RVM environment file: '/usr/share/rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/environment'" >&2
+  exit 1
+fi
