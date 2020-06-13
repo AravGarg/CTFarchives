@@ -1,0 +1,5 @@
+set follow-fork-mode child
+pie breakpoint *0xEDA
+pie breakpoint *0xfdb
+display/50xg $rbp-0x40
+display/xw $rbp-0x44
