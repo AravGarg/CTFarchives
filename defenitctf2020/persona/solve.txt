@@ -1,0 +1,1 @@
+For Persona, when you share ur persona struct to other processes, it can't be assured that the heap pointer(char *bio) of an original process is pointing the right(safe) address when it comes to the another process. You can easily make AAW/AAR with that vuln, easy profit then.
