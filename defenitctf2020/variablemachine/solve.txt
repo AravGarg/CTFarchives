@@ -1,2 +1,0 @@
-The variable machine can be freed chunk write due to any mistake. Bitbit also had a heap overflow due to some mistake, and it was a problem to fix it. Please wait a detailed writeup. i am writing now
-https://www.notion.so/Defenit-CTF-2020-ade355603bd94acdbe8ced623d17ce6c
