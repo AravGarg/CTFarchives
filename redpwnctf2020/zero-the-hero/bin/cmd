@@ -1,0 +1,6 @@
+pie breakpoint *(0xA1A)
+canary
+display/xg $rbp-0x10
+display/xg $rbp-0x18
+
+

@@ -1,0 +1,19 @@
+A really good fsop writeup to learn from imo is trip to trick from hacktm ctf 2020
+From teamrocketist
+And of course angelboys famous paper on fsop
+You flip the buffer end of stdin with the 0x30
+Some bruteforcing was necessary
+If my buf base had 2nd lowest byte as 0x2a
+I continued
+Otherwise I stopped
+By flipping that byte to 0x30
+You have a overflow in the stdin region
+Allowing you to overwrite file structures
+But you want to preserve those
+However
+When you hit malloc hook
+Change that
+To a one gadget
+
+
+watched+starred

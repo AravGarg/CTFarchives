@@ -1,0 +1,2 @@
+pie breakpoint *(0xBBDB)
+display/xg $rsp+0x58
