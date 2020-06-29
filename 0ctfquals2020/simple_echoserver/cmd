@@ -1,0 +1,4 @@
+pie breakpoint *(0x141a)
+pie breakpoint *(0x14d6)
+display/100xg $rsp
+
