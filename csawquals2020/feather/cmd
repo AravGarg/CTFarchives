@@ -1,0 +1,8 @@
+#first break
+#b *0x4036CE
+#b64 decode
+#b *0x4037D4 
+#header check
+#b *0x403A8E
+#call load feather fs
+b *0x404B80

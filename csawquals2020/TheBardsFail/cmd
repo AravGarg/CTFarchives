@@ -1,0 +1,3 @@
+#first entry
+b *0x400F02
+display/70xg 0x7fffffffe150
