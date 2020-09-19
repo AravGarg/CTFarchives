@@ -1,0 +1,8 @@
+#pow2
+#b *0x40093E
+#iter
+#b *0x400D7A
+#fread
+#b *0x400B9B
+#append
+b *0x400920
