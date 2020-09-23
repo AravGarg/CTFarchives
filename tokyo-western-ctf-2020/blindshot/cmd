@@ -1,0 +1,2 @@
+pie breakpoint *0x130b
+display/10xg $rbp-0x10
