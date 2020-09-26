@@ -1,0 +1,5 @@
+#menu
+pie breakpoint *0xed6
+#printf
+pie breakpoint *0xcbb
+#b _IO_vfprintf_internal
