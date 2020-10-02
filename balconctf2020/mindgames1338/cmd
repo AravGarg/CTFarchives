@@ -1,0 +1,4 @@
+#memcpy
+pie breakpoint *0x13ed
+#leaks
+pie breakpoint *0x1374

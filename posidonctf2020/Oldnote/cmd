@@ -1,0 +1,3 @@
+pie breakpoint *0x15f3
+pie breakpoint *0x1533
+display &_IO_2_1_stdout_

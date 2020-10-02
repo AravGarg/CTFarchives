@@ -1,0 +1,9 @@
+#iter
+#pie breakpoint *0x30C0
+#addsize
+#pie breakpoint *0x2e19
+#leaks
+pie breakpoint *0x2cd0
+display/2xg (void *)&vec_puzzle
+display/6xg *(unsigned long *)&vec_puzzle
+
