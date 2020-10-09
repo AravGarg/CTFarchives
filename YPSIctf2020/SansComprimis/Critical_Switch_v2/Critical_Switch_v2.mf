@@ -1,0 +1,2 @@
+SHA256 (Critical_Switch_v2-disk001.vmdk) = bb599d53c1ec74396d40a772a3051485c389dd89cb5eb61133427f514ab122bb
+SHA256 (Critical_Switch_v2.ovf) = e39687d5845adf6fcd23e9bd87a313e5d63b6bb9db5b4f3df8a98b553416541b
