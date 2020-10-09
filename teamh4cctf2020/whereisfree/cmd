@@ -1,0 +1,3 @@
+#b *0x400B97
+b _IO_str_overflow
+#b _IO_flush_all_lockp
