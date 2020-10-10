@@ -1,0 +1,3 @@
+b *0x4010B0
+display/12xg 0x602100
+b puts
