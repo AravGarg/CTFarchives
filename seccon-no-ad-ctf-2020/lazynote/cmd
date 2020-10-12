@@ -1,0 +1,8 @@
+#calloc
+#pie breakpoint *0xaae
+#ret
+pie breakpoint *0xb2d
+#b puts
+#b _IO_new_file_overflow
+#b fgets
+set directories /media/sf_kalishared/glibcs/glibc-2.27/libio
