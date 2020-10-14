@@ -1,11 +1,11 @@
 #inner ret
 b *0x40093f
 #first
-#b *0x400874
+b *0x400874
 #real encrypt
 #b *0x400900
-#display/xg 0x600dc0
+display/xg 0x600dc0
 #display/xg 0x600e50
 #display/xg 0x600e60
-#display/xg 0x600e70
+display/xg 0x600e70
 #display puts
