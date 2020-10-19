@@ -1,0 +1,8 @@
+#display/xg (unsigned long *)&_dl_open_hook
+#pie breakpoint *0x132d
+#b _IO_flush_all_lockp
+b malloc
+b free
+dir ../../../glibcs/glibc-2.31/libio
+dir ../../../glibcs/glibc-2.31/malloc
+dir ../../../glibcs/glibc-2.31/stdlib
